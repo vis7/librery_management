@@ -1,0 +1,27 @@
+
+<form method=post> {% csrf_token %}
+
+<select name='book_pk'>
+
+{% for book in book_list %}
+    <option value={{book.pk}}>{{book.name}}
+{% endfor %}
+
+</select>
+
+<br><br><br>
+
+
+<select name='user_pk'>
+
+{% for user in user_list %}
+    <option value={{user.pk}}>{{user.name}}
+{% endfor %}
+
+</select>
+
+<input type='submit' value='issue'>
+
+<br>
+
+</form>

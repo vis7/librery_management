@@ -1,0 +1,14 @@
+{% extends 'books/base.html' %}
+
+{% block 'main' %}
+this is overrided book list view <br>
+
+{% for book in book_list %}
+    <a href="{{book.get_absolute_url}}"> {{book.name}} </a> <br>
+{% endfor %}
+
+{% endblock 'main' %}
+
+{% comment %} this is comment  {% endcomment %}
+
+

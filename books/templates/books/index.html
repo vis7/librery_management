@@ -1,0 +1,8 @@
+
+{% if user.is_authenticated %}
+    welcome {{user}} <br>
+    click <a href="{% url 'logout' %}">here</a> for logout
+{% else %}
+    click <a href="{% url 'login' %}">here</a> for login
+{% endif %}
+
